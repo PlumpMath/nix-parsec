@@ -45,7 +45,7 @@ let
   ;
 
   Name =
-    let isChar = c: builtins.match "[a-zA-Z0-9_:-]" c != null; in
+    let isChar = c: builtins.match "[a-z\.A-Z0-9_:-]" c != null; in
     lexeme (takeWhile1 isChar)
   ;
 
